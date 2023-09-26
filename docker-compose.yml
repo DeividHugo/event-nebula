@@ -1,0 +1,43 @@
+version: '3'
+services: 
+  client-nebula:
+    build:
+      dockerfile: Dockerfile-client
+    container_name: client-nebula
+    ports: 
+      - "3000:3000"
+    volumes:
+      - ./client:/client
+    env_file:
+      - .env
+    restart: always 
+
+  server-nebula:
+    build:
+      dockerfile: Dockerfile-server
+    container_name: server-nebula
+    ports: 
+      - "3001:3001"
+    volumes:
+      - ./server:/server
+    env_file:
+      - .env
+    restart: always 
+
+  postgresdb-nebula: 
+    image: postgres:latest 
+    container_name: postgresdb-nebula 
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    restart: always
+
+  mongodb-nebula:
+    image: mongo:latest 
+    container_name: mongodb-nebula 
+    ports:
+      - "27017:27017"  
+    env_file:
+      - .env
+    restart: always
