@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DeividHugo/event-nebula/issues"
   },
-  "homepage": "https://github.com/DeividHugo/event-nebula#readme"
+  "homepage": "https://github.com/DeividHugo/event-nebula#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
