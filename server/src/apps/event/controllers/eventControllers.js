@@ -1,6 +1,8 @@
 const Event = require('../models/event');
 const baseController = require('../../../utils/baseController');
 
+exports.modelName = Event.name
+
 exports.getAll = async (req, res) => {
     baseController.getAllRecords(req, res, Event);
 };

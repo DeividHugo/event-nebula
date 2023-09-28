@@ -3,17 +3,17 @@
 const express = require('express');
 const subscriptionController = require('../controllers/subscriptionController');
 
-const modelName = 'subscription'
+const modelName = subscriptionController.modelName
 const router = express.Router();
 
-router.get(`${modelName}/list/`, subscriptionController.getAll);
+router.get(`/${modelName}/list/`, subscriptionController.getAll);
 
-router.post(`${modelName}/create/`, subscriptionController.create);
+router.post(`/${modelName}/create/`, subscriptionController.create);
 
-router.put(`${modelName}/update/:id`, subscriptionController.update);
+router.put(`/${modelName}/update/:id`, subscriptionController.update);
 
-router.delete(`${modelName}/delete/:id`, subscriptionController.delete);
+router.delete(`/${modelName}/delete/:id`, subscriptionController.delete);
 
-router.get(`${modelName}/detail/:id`, subscriptionController.getDetail);
+router.get(`/${modelName}/detail/:id`, subscriptionController.getDetail);
 
 module.exports = router;

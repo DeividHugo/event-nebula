@@ -1,6 +1,8 @@
 const User = require('../models/user');
 const baseController = require('../../../utils/baseController');
 
+exports.modelName = User.name
+
 exports.getAll = async (req, res) => {
     baseController.getAllRecords(req, res, User);
 };
