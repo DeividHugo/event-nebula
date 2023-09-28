@@ -1,4 +1,4 @@
-const connection = require('../services/database.js');
+const connection = require('../services/databaseService.js');
 
 connection
   .authenticate()
